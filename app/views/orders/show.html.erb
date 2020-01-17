@@ -25,5 +25,12 @@
   <%= @order.user_id %>
 </p>
 
+<p>
+  <strong>Product Name:</strong>
+  <%= @order.order_products.first.product.name %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
