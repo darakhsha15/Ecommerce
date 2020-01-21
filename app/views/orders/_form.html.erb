@@ -35,15 +35,17 @@
   <%= form.hidden_field :user_id, :value=>current_user.id %>
   </div>
 
-  <div class="field">
-    <%= form.label :qty %>
-    <%= form.number_field :qty %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product_id %>
-    <%= form.text_field :product_id %>
-  </div>
+  <!-- Accept Data For Order Product -->
+  <%= form.fields_for :order_products do |product_fields| %>
+    <div class="form-group">
+      <%= product_fields.label :qty %>
+      <%= product_fields.text_field :qty, class:"form-control" %>
+    </div>
+    <div class="form-group" >
+      <%= product_fields.label :name %>
+      <%= product_fields.select :product_id,options_for_select(Product.all.collect{|c| [c.name, c.id]}), class: "form-control" %>
+    </div>
+    <% end %>
 
   <div class="actions">
     <%= form.submit %>
