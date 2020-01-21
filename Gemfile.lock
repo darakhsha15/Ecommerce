@@ -84,6 +84,13 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
     devise (4.7.1)
@@ -282,6 +289,7 @@ DEPENDENCIES
   bootstrap-will_paginate (~> 0.0.10)
   byebug
   capybara (>= 2.15)
+  coffee-rails (~> 5.0)
   devise (~> 4.7, >= 4.7.1)
   faker (~> 2.10, >= 2.10.1)
   jbuilder (~> 2.7)
