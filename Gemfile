@@ -26,6 +26,7 @@ gem 'faker', '~> 2.10', '>= 2.10.1'
 gem 'will_paginate', '~> 3.2', '>= 3.2.1'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'coffee-rails', '~> 5.0'
 
 
 # Use Redis adapter to run Action Cable in production

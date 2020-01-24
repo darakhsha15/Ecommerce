@@ -25,10 +25,24 @@
   <%= @order.user_id %>
 </p>
 
-<p>
-  <strong>Product Name:</strong>
-  <%= @order.order_products.first.product.name %>
-</p>
+<% @order.order_products.each do |order| %>
+  <p>
+    <strong>Product_id:</strong>
+    <%= order.product_id %>
+  </p>
+  <p>
+    <strong>Product_name:</strong>
+    <%= order.product.name %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%= order.product.price %>
+  </p>
+  <p>
+    <strong>Quantity:</strong>
+    <%= order.qty%>
+  </p>
+<% end %>
 
 
 
